@@ -1,0 +1,158 @@
+<form script="table_icons_inline.js,custom_layout_width.js,custom_table_row_expansion.js,autodiscover.js" stylesheet="table_decorations.css">
+  <label>Stream Splunk HTTP and User Access Data</label>
+  <fieldset autoRun="true" submitButton="false">
+    <input type="time" token="time_tok" searchWhenChanged="true">
+      <label></label>
+      <default>
+        <earliest>-60m@m</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+  </fieldset>
+  <search id="sankey_search">
+    <query>
+      <![CDATA[
+			sourcetype="stream:http" site="localhost:*" uri_path=*/app/* OR uri_path=*/manager/* OR uri_path=*account* | rex field=uri_path ".*/(app|manager)?/?(?<splunk_app>(account|[^/]+))/(?<app_page>[^/]+)" | rex field=src_headers "REMOTE-USER:\s(?<splunk_user>.*)" | rex field=form_data "username=(?<splunk_user>[^&]+)&" | search splunk_user=$user$ | eval "to"=splunk_app.": ".app_page | rex field=http_referrer ".*/(app|manager)?/?(?<referrer_app>(account|[^/]+))/(?<referrer_page>[^/?]+)" | eval "from"=referrer_app.": ".referrer_page | stats count by from to | head 50
+                ]]>
+    </query>
+    <earliest>$time_tok.earliest$</earliest>
+    <latest>$time_tok.latest$</latest>
+  </search>
+  <row>
+    <panel>
+      <chart>
+        <title>Top Splunk Apps</title>
+        <search>
+          <query>sourcetype="stream:http" site="localhost:*" uri_path=*/app/* | rex field=uri_path ".*/app/(?&lt;splunk_app&gt;[^/]+)/(?&lt;app_page&gt;[^/]+)" |  top splunk_app</query>
+          <earliest>$time_tok.earliest$</earliest>
+          <latest>$time_tok.latest$</latest>
+        </search>
+        <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
+        <option name="charting.axisTitleX.visibility">visible</option>
+        <option name="charting.axisTitleY.visibility">visible</option>
+        <option name="charting.axisTitleY2.visibility">visible</option>
+        <option name="charting.axisX.scale">linear</option>
+        <option name="charting.axisY.scale">linear</option>
+        <option name="charting.axisY2.enabled">false</option>
+        <option name="charting.axisY2.scale">inherit</option>
+        <option name="charting.chart">pie</option>
+        <option name="charting.chart.bubbleMaximumSize">50</option>
+        <option name="charting.chart.bubbleMinimumSize">10</option>
+        <option name="charting.chart.bubbleSizeBy">area</option>
+        <option name="charting.chart.nullValueMode">gaps</option>
+        <option name="charting.chart.sliceCollapsingThreshold">0.01</option>
+        <option name="charting.chart.stackMode">default</option>
+        <option name="charting.chart.style">shiny</option>
+        <option name="charting.drilldown">all</option>
+        <option name="charting.layout.splitSeries">0</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
+        <option name="charting.legend.placement">right</option>
+      </chart>
+    </panel>
+    <panel>
+      <table id="table1">
+        <title>Top Splunk Apps</title>
+        <search>
+          <query>sourcetype="stream:http" site="localhost:*" uri_path=*/app/* | rex field=uri_path ".*/app/(?&lt;splunk_app&gt;[^/]+)/(?&lt;app_page&gt;[^/]+)" | eval "App: Web Page"=splunk_app.": ".app_page | stats  sparkline count(response_time) avg(response_time) by "App: Web Page" | rename avg(response_time) AS "Average Response Time in MS", count(response_time) AS "Page Hits", sparkline AS "Hits Over Time" | sort - "Page Hits"</query>
+          <earliest>$time_tok.earliest$</earliest>
+          <latest>$time_tok.latest$</latest>
+        </search>
+        <option name="wrap">true</option>
+        <option name="rowNumbers">false</option>
+        <option name="drilldown">cell</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="count">10</option>
+        <!-- Set sparkline options here; make sure that field matches field name of the search results -->
+        <format type="sparkline" field="Hits Over Time">
+          <option name="lineColor">#5379af</option>
+          <option name="fillColor">#CCDDFF</option>
+          <option name="lineWidth">1</option>
+          <option name="maxSpotColor">#FF0000</option>
+          <option name="spotRadius">3</option>
+          <option name="height">25px</option>
+        </format>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <chart>
+        <title>Splunk App Page Hit Totals with Overall Average Response Times (Dual Axis)</title>
+        <search>
+          <query>sourcetype="stream:http" site="localhost:*" uri_path=*/app/* | rex field=uri_path ".*/app/(?&lt;splunk_app&gt;[^/]+)/(?&lt;app_page&gt;[^/]+)" | eval "App: Web Page"=splunk_app.": ".app_page | timechart count(response_time) AS "Page Hits" avg(response_time) AS "Average Response Time in MS"</query>
+          <earliest>$time_tok.earliest$</earliest>
+          <latest>$time_tok.latest$</latest>
+        </search>
+        <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.axisTitleY.visibility">collapsed</option>
+        <option name="charting.axisTitleY2.visibility">visible</option>
+        <option name="charting.axisX.scale">linear</option>
+        <option name="charting.axisY.scale">linear</option>
+        <option name="charting.axisY2.enabled">true</option>
+        <option name="charting.axisY2.scale">inherit</option>
+        <option name="charting.chart">column</option>
+        <option name="charting.legend.placement">bottom</option>
+        <option name="charting.legend.masterLegend">null</option>
+        <option name="height">250px</option>
+        <option name="charting.chart.overlayFields">"Average Response Time in MS"</option>
+        <option name="charting.axisY2.enabled">true</option>
+        <option name="charting.axisY2.scale">inherit</option>
+        <option name="charting.axisY2.fields">"Average Response Time in MS"</option>
+        <option name="charting.fieldColors">{"Page Hits": 0x639BF1, "Average Response Time in MS":0xFF5A09}</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
+        <option name="charting.chart.bubbleMaximumSize">50</option>
+        <option name="charting.chart.bubbleMinimumSize">10</option>
+        <option name="charting.chart.bubbleSizeBy">area</option>
+        <option name="charting.chart.nullValueMode">gaps</option>
+        <option name="charting.chart.sliceCollapsingThreshold">0.01</option>
+        <option name="charting.chart.stackMode">default</option>
+        <option name="charting.chart.style">shiny</option>
+        <option name="charting.drilldown">all</option>
+        <option name="charting.layout.splitSeries">0</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>App Usage Patterns for: $user$</title>
+      <input type="dropdown" token="user" searchWhenChanged="true">
+        <label>User</label>
+        <search>
+          <query>sourcetype="stream:http" site="localhost:*" uri_path=*/app/* | rex field=src_headers "REMOTE-USER:\s(?&lt;splunk_user&gt;.*)" | stats count by splunk_user</query>
+          <earliest>$time_tok.earliest$</earliest>
+          <latest>$time_tok.latest$</latest>
+        </search>
+        <fieldForLabel>splunk_user</fieldForLabel>
+        <fieldForValue>splunk_user</fieldForValue>
+        <default>admin</default>
+      </input>
+      <html>
+                <div id="sankey" class="splunk-view" data-require="app/simple_xml_examples/components/sankey/sankey" data-options="{                             &quot;managerid&quot;: &quot;sankey_search&quot;,                             &quot;height&quot;: 400                          }">
+                </div>
+      </html>
+      <table>
+        <title>Splunk App Performance for: $user$</title>
+        <search>
+          <query>sourcetype="stream:http" site="localhost:*" uri_path=*/app/* | rex field=uri_path ".*/app/(?&lt;splunk_app&gt;[^/]+)/(?&lt;app_page&gt;[^/]+)" | rex field=src_headers "REMOTE-USER:\s(?&lt;splunk_user&gt;.*)" | search splunk_user =$user$ | eval "App: Web Page"=splunk_app.": ".app_page | stats  sparkline count(response_time) avg(response_time) by "App: Web Page" splunk_user | rename avg(response_time) AS "Average Response Time in MS", count(response_time) AS "Page Hits", sparkline AS "Hits Over Time", splunk_user AS "Splunk User" | sort - "Page Hits"</query>
+          <earliest>$time_tok.earliest$</earliest>
+          <latest>$time_tok.latest$</latest>
+        </search>
+        <option name="wrap">true</option>
+        <option name="rowNumbers">false</option>
+        <option name="drilldown">cell</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="count">10</option>
+        <!-- Set sparkline options here; make sure that field matches field name of the search results -->
+        <format type="sparkline" field="Hits Over Time">
+          <option name="type">bar</option>
+          <option name="height">40px</option>
+          <option name="barColor">#5379AF</option>
+          <option name="barWidth">5px</option>
+        </format>
+      </table>
+    </panel>
+  </row>
+</form>

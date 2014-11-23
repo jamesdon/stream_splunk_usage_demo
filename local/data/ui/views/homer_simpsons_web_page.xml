@@ -1,0 +1,56 @@
+<form stylesheet="custom_layout_overlay_single.css">
+  <label>"Here it is everybody, the World's Greatest Website!"</label>
+    <description/>
+  <fieldset autoRun="true" submitButton="false">
+    <input type="time" searchWhenChanged="true">
+      <default>
+        <earliestTime>-24h@h</earliestTime>
+        <latestTime>now</latestTime>
+      </default>
+    </input>
+  </fieldset>
+  <row>
+      <panel id="image_overlay_panel">
+          <html>
+              <div class="image"></div>
+          </html>
+          <single id="parsing_queue">
+              <searchString>sourcetype="stream:http" site="localhost:*" uri_path=*/app/* | rex field=uri_path ".*/app/(?&lt;splunk_app&gt;[^/]+)/(?&lt;app_page&gt;[^/]+)" | stats count(app_page)</searchString>
+              <earliestTime>$earliest$</earliestTime>
+              <latestTime>$latest$</latestTime>
+              <option name="underLabel">Page Hits</option>
+              <option name="field">count</option>
+              <option name="linkView">stream_http_data</option>
+              <option name="linkFields">result</option>
+          </single>
+          <single id="merging_queue">
+              <searchString>sourcetype="stream:http" site="localhost:*" uri_path=*/app/* | dedup src_ip | stats count(src_ip)</searchString>
+              <earliestTime>$earliest$</earliestTime>
+              <latestTime>$latest$</latestTime>
+              <option name="underLabel">Unique IPs</option>
+              <option name="field">count</option>
+              <option name="linkView">stream_http_data</option>
+              <option name="linkFields">result</option>
+          </single>
+          <single id="typing_queue">
+              <searchString>sourcetype="stream:http" site="localhost:*" uri_path=*/app/* | rex field=src_headers "REMOTE-USER:\s(?&lt;splunk_user&gt;.*)" | dedup splunk_user | stats count(splunk_user)</searchString>
+              <earliestTime>$earliest$</earliestTime>
+              <latestTime>$latest$</latestTime>
+              <option name="underLabel">Unique Visitors</option>
+              <option name="field">count</option>
+              <option name="linkView">stream_http_data</option>
+              <option name="linkFields">result</option>
+          </single>
+          <single id="index_queue">
+              <searchString>sourcetype="stream:http" site="localhost:*" uri_path=*/app/* | rex field=uri_path ".*/app/(?&lt;splunk_app&gt;[^/]+)/(?&lt;app_page&gt;[^/]+)" | eval "App: Web Page"=splunk_app.": ".app_page | stats avg(response_time) AS rt | eval rt=round(rt,2)</searchString>
+              <earliestTime>$earliest$</earliestTime>
+              <latestTime>$latest$</latestTime>
+              <option name="underLabel">Average Response Time in MS</option>
+              <option name="field">count</option>
+              <option name="linkView">stream_http_data</option>
+              <option name="linkFields">result</option>
+          </single>
+      </panel>
+  </row>
+  <row/>
+</form>

@@ -1,0 +1,42 @@
+[app/ui]
+version = 6.2.0
+modtime = 1415202937.579521000
+
+[app/launcher]
+version = 6.2.0
+modtime = 1415202937.583905000
+
+[app/install/install_source_checksum]
+version = 6.2.0
+modtime = 1415660758.373279000
+
+[nav/default]
+version = 6.2.0
+modtime = 1416581680.738790000
+
+[views/system_performance]
+owner = admin
+version = 6.2.0
+modtime = 1416369703.645476000
+
+[inputs/streamfwd%3A%2F%2Fstream]
+owner = admin
+version = 6.2.0
+modtime = 1415669382.846549000
+
+[views/stream_http_data_clone]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = admin
+version = 6.2.0
+modtime = 1416370589.259846000
+
+[views/homer_simpsons_web_page]
+owner = admin
+version = 6.2.0
+modtime = 1416513170.757968000
+
+[views/stream_www_data]
+owner = admin
+version = 6.2.0
+modtime = 1416589913.548292000

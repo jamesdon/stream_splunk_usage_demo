@@ -1,0 +1,48 @@
+#image_overlay_panel .image{
+    background: transparent 50% 50% no-repeat url('/static/app/stream_splunk_usage_demo/hwp.gif');
+    margin: 0 auto;
+    top: 5;
+    position: absolute;
+    width: 1000px;
+    height: 600px;
+}
+#image_overlay_panel .dashboard-panel  {
+    position: absolute;
+    width: 1010px;
+    height: 610px;
+}
+#image_overlay_panel .panel-element-row {
+    margin: 0 auto;
+    top: 0;
+    position: absolute;
+    width: 1050px;
+    height: 650px;
+}
+#image_overlay_panel .panel-head,
+#image_overlay_panel .panel-footer {
+    display: none;
+}
+#image_overlay_panel .after-label{
+    display: inline-block;
+}
+#image_overlay_panel #parsing_queue {
+   position: absolute;
+   top: 110px;
+   left: 1px;
+}
+#image_overlay_panel #merging_queue {
+   position: absolute;
+   top: 210px;
+   left: 1px;
+}
+#image_overlay_panel #typing_queue {
+   position: absolute;
+   top: 310px;
+   left: 1px;
+}
+#image_overlay_panel #index_queue {
+   position: absolute;
+   top: 410px;
+   left: 1px;
+}
+

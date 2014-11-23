@@ -13,7 +13,7 @@ def printdata(a,b):
 	
   with open('../data/output.csv','a') as outfile:
 	writer = csv.writer(outfile)
-	'app='+outfile.write(str(activeAppName)+' clickcount='+str(counter)+'\n')
+	outfile.write(str(activeAppName) + ',' + str(counter)+'\n')
 	counter = 0 
 	
 def MyFunction(p, t, e, c):

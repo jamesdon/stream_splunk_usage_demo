@@ -1,3 +1,5 @@
+Author:  James Donn
+
 This demo requires a few configuration updates in other Apps to work.  This doc breaks down what each dashboard requires.
 
 Stream Splunk HTTP and User Access Data Dashboard:

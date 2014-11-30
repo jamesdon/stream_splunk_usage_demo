@@ -2,7 +2,6 @@
 from AppKit import NSWorkspace
 from time import sleep
 from Quartz import *
-import csv
 import time
 
 ### Set the counter
@@ -11,11 +10,9 @@ counter = 0
 def printdata(a,b):
   global counter 
   activeAppName = NSWorkspace.sharedWorkspace().activeApplication()['NSApplicationName']
-	
-  with open('../data/output.log','a') as outfile:
-	writer = csv.writer(outfile)
-	outfile.write(time.asctime(time.localtime(time.time())) + ' app="' + str(activeAppName) + '" cps=' + str(counter)+'\n')
-	counter = 0 
+  f = open('../data/output.log','a')
+  f.write(time.asctime(time.localtime(time.time())) + ' app="' + str(activeAppName) + '" cps=' + str(counter)+'\n')
+  counter = 0 
 	
 def MyFunction(p, t, e, c):
 	global counter

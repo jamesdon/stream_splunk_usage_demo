@@ -50,3 +50,18 @@ modtime = 1417211921.822289000
 owner = admin
 version = 6.2.0
 modtime = 1417280896.703914000
+
+[indexes/keystrokes]
+owner = admin
+version = 6.2.0
+modtime = 1417306761.502074000
+
+[props/keystrokes]
+owner = admin
+version = 6.2.0
+modtime = 1417306819.961412000
+
+[inputs/monitor%3A%2F%2F%2Fprivate%2Fvar%2Flog%2Fsystem.log]
+owner = admin
+version = 6.2.0
+modtime = 1417306832.109069000

@@ -57,9 +57,14 @@ figure it out.
 
 	/opt/splunk/etc/apps/stream_splunk_usage_demo/bin/clickcounter.py
 
-I want to add tracking of keyboard clicks, window resizing, and trackpad distance travel...
 
 
+To enable keyboard tracking, you must allow the Terminal App to control your computer.  To do this:
+System Preferences -> Security & Privacy -> Privacy (tab) -> Accessibility (in column) -> Add Terminal.app 
 
+Also be sure to ensure there is a check mark next to it.
 
-
+Wish list:
+track keyboard clicks
+window resizing
+trackpad distance traveled

@@ -11,7 +11,7 @@
       </input>
       <chart>
         <search>
-          <query>sourcetype=clicks | timechart max(cps) by app minspan=1s</query>
+          <query>index=clicks | timechart max(cps) by app minspan=1s</query>
           <earliest>$chart_time.earliest$</earliest>
           <latest>$chart_time.latest$</latest>
         </search>
@@ -50,7 +50,7 @@
       </input>
       <table>
         <search>
-          <query>sourcetype=clicks | stats count(cps) by app | rename count(cps) AS "Total Clicks" | sort - "Total Clicks"</query>
+          <query>index=clicks | stats sum(cps) by app | rename sum(cps) AS "Total Clicks" | sort - "Total Clicks"</query>
           <earliest>$table_time.earliest$</earliest>
           <latest>$table_time.latest$</latest>
         </search>

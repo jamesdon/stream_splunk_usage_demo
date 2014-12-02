@@ -1,0 +1,49 @@
+<form script="autodiscover.js">
+    <label>Tag Cloud with Tokens</label>
+    
+    <fieldset autoRun="true" submitButton="false">
+        <input type="dropdown" token="metric" searchWhenChanged="true">
+            <label>Metric</label>
+            <choice>cpu_seconds</choice>
+            <choice>executes</choice>
+            <choice>cumulative_hits</choice>
+            <default>cpu_seconds</default>
+        </input>
+        <input type="time" />
+    </fieldset>
+    
+    <row>
+        <panel>
+            <!-- Separate HTML element for the title, so we can safely use HTML-based token-replacement without affecting the custom visualization -->
+            <html>
+                <h2>Custom Visualization: Tag Cloud (showing $metric$ of processors)</h2>
+            </html>
+            
+            <html>
+                <div id="tagcloud-search"
+                     class="splunk-manager splunk-searchmanager "
+                     data-require="splunkjs/mvc/searchmanager"
+                     data-options='{
+                            "app": "stream_splunk_usage_demo",
+                            "preview": true,
+                            "search": "index=_internal source=*metrics.log group=pipeline | stats max(cpu_seconds) as cpu_seconds sum(executes) as executes sum(cumulative_hits) as cumulative_hits by processor",
+                            "earliest_time": { "type": "token_safe", "value": "$$earliest$$" },
+                            "latest_time": { "type": "token_safe", "value": "$$latest$$" }
+                        }'>
+                </div>
+    
+                <div id="tagcloud"
+                     class="splunk-view"
+                     data-require="app/stream_splunk_usage_demo/components/tagcloud/tagcloud"
+                     data-options='{
+                            "minFontSize": 15,
+                            "maxFontSize": 95,
+                            "managerid": "tagcloud-search",
+                            "valueField": { "type": "token_safe", "value": "$$metric$$" },
+                            "labelField": "processor"
+                         }'>
+                </div>
+            </html>
+        </panel>
+    </row>
+</form>

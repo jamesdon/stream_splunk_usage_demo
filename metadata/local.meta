@@ -49,7 +49,7 @@ modtime = 1417211921.822289000
 [views/clicks]
 owner = admin
 version = 6.2.0
-modtime = 1417280896.703914000
+modtime = 1417307944.772779000
 
 [indexes/keystrokes]
 owner = admin
@@ -65,3 +65,8 @@ modtime = 1417306819.961412000
 owner = admin
 version = 6.2.0
 modtime = 1417306832.109069000
+
+[views/tag_cloud]
+owner = admin
+version = 6.2.0
+modtime = 1417316869.055591000

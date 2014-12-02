@@ -55,16 +55,30 @@ figure it out.
 
 2) The script needs to be launched manually to start tracking clicks.  It takes about 5 seconds to begin recording.
 
-	/opt/splunk/etc/apps/stream_splunk_usage_demo/bin/clickcounter.py
+	/opt/splunk/etc/apps/stream_splunk_usage_demo/bin/clickcounter.py &
 
 
+### Keys!:
 
 To enable keyboard tracking, you must allow the Terminal App to control your computer.  To do this:
 System Preferences -> Security & Privacy -> Privacy (tab) -> Accessibility (in column) -> Add Terminal.app 
 
 Also be sure to ensure there is a check mark next to it.
 
-Wish list:
-track keyboard clicks
-window resizing
-trackpad distance traveled
+This dashboard is fueled by the keystrokes.py script in the bin dir.  There are a couple of things you need
+to do to enure everything works as expected.  I plan on automating more of these functions as soon as I can
+figure it out.
+
+1) The monitor stanza assumes that you are using the same default sirectory that I am:
+
+        /opt/splunk/etc/apps/stream_splunk_usage_demo/data/keys.log
+
+2) The script needs to be launched manually to start tracking clicks.  It takes about 5 seconds to begin recording.
+
+        /opt/splunk/etc/apps/stream_splunk_usage_demo/bin/keystrokes.py &
+
+
+### Wish list:
+Merge keyboard strokes with trackpad clicks
+Add window resizing
+Add trackpad distance traveled

@@ -2,9 +2,9 @@
 # cocoa_keypress_monitor.py by Bjarte Johansen is licensed under a
 # License: http://ljos.mit-license.org/
  
-from AppKit import NSApplication, NSApp
+from AppKit import NSApplication, NSApp, NSWorkspace
 from Foundation import NSObject, NSLog
-from Cocoa import (NSEvent, NSKeyDownMask, NSCommandKeyMask, NSControlKeyMask, NSAlternateKeyMask, NSShiftKeyMask, NSLeftMouseDownMask, NSRightMouseDownMask, NSMouseMovedMask, NSScrollWheelMask, NSFlagsChangedMask)
+from Cocoa import (NSEvent, NSKeyDownMask, NSCommandKeyMask, NSControlKeyMask, NSAlternateKeyMask, NSShiftKeyMask, NSLeftMouseDownMask, NSRightMouseDownMask, NSMouseMovedMask, NSScrollWheel, NSFlagsChangedMask)
 from PyObjCTools import AppHelper
 import logging
  
@@ -18,14 +18,15 @@ class AppDelegate(NSObject):
 		| NSLeftMouseDownMask
 		| NSRightMouseDownMask
 		| NSMouseMovedMask
-		| NSScrollWheelMask
+		| NSScrollWheel
 		| NSFlagsChangedMask)
         NSEvent.addGlobalMonitorForEventsMatchingMask_handler_(mask, handler)
  
 def handler(event):
     try:
         # logging.info(str(event))
-        logging.info(str(event).replace('\r', ' <RETURN>').replace('\n', ' <NEWLINE>').replace('\t', ' <TAB>').replace('\" \"', '\" <SPACE>\"'))
+	activeAppName = NSWorkspace.sharedWorkspace().activeApplication()['NSApplicationName']
+        logging.info(' app="' + str(activeAppName) + '" ' + str(event).replace('\r', '<RETURN>').replace('\n', '<NEWLINE>').replace('\t', '<TAB>').replace('\" \"', '\"<SPACE>\"'))
     except UnicodeEncodeError as e:
 	# logging.info(event.encode('ascii', 'xmlcharrefreplace'))
         logging.info(event)
@@ -36,7 +37,7 @@ def handler(event):
  
 def main():
     app = NSApplication.sharedApplication()
-    logging.basicConfig(filename='../data/jim.log', format='%(asctime)s %(message)s', level=logging.INFO)
+    logging.basicConfig(filename='../data/keys.log', format='%(asctime)s %(message)s', level=logging.INFO)
     delegate = AppDelegate.alloc().init()
     NSApp().setDelegate_(delegate)
     AppHelper.runEventLoop()

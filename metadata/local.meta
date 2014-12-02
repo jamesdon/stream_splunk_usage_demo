@@ -83,16 +83,23 @@ access = read : [ * ], write : [ admin ]
 export = none
 owner = admin
 version = 6.2.0
-modtime = 1417538220.856335000
+modtime = 1417552693.631438000
 
 [transforms/keys]
 access = read : [ * ], write : [ admin ]
 export = none
 owner = admin
 version = 6.2.0
-modtime = 1417538079.471201000
+modtime = 1417552512.982717000
 
 [views/keys]
 owner = admin
 version = 6.2.0
-modtime = 1417541392.092107000
+modtime = 1417545590.849127000
+
+[props/keystrokes/LOOKUP-key_names]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 6.2.0
+modtime = 1417550976.388459000

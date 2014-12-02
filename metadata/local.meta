@@ -12,7 +12,7 @@ modtime = 1415660758.373279000
 
 [nav/default]
 version = 6.2.0
-modtime = 1417281160.068249000
+modtime = 1417540410.652841000
 
 [views/system_performance]
 owner = admin
@@ -70,3 +70,29 @@ modtime = 1417306832.109069000
 owner = admin
 version = 6.2.0
 modtime = 1417316869.055591000
+
+[lookups/keys.csv]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 6.2.0
+modtime = 1417537869.392938000
+
+[props/keystrokes/LOOKUP-keys]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 6.2.0
+modtime = 1417538220.856335000
+
+[transforms/keys]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 6.2.0
+modtime = 1417538079.471201000
+
+[views/keys]
+owner = admin
+version = 6.2.0
+modtime = 1417541392.092107000

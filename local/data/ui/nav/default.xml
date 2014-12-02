@@ -4,6 +4,7 @@
   <view name="stream_www_data" />
   <view name="system_performance" />
   <view name="clicks" />
+  <view name="keys" />
   <view name="search" />
   <view name="dashboards" />
 </nav>

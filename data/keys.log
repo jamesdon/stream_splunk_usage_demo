@@ -1244,3 +1244,252 @@
 2014-12-01 20:42:51,283 NSEvent: type=KeyDown loc=(374,417) time=80285.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="-" unmodchars="-" repeat=0 keyCode=27
 2014-12-01 20:42:51,371 NSEvent: type=KeyDown loc=(374,417) time=80285.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="a" unmodchars="a" repeat=0 keyCode=0
 2014-12-01 20:42:51,571 NSEvent: type=KeyDown loc=(374,417) time=80285.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:43:06,227 NSEvent: type=KeyDown loc=(374,417) time=80300.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:43:07,274 NSEvent: type=KeyDown loc=(374,417) time=80301.3 flags=0x20102 win=0x0 winNum=0 ctxt=0x0 chars="A" unmodchars="A" repeat=0 keyCode=0
+2014-12-01 20:43:07,470 NSEvent: type=KeyDown loc=(374,417) time=80301.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:43:07,610 NSEvent: type=KeyDown loc=(374,417) time=80301.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:43:07,754 NSEvent: type=KeyDown loc=(374,417) time=80301.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="e" unmodchars="e" repeat=0 keyCode=14
+2014-12-01 20:43:07,874 NSEvent: type=KeyDown loc=(374,417) time=80301.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:43:08,066 NSEvent: type=KeyDown loc=(374,417) time=80302.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars=" " unmodchars=" " repeat=0 keyCode=49
+2014-12-01 20:43:08,699 NSEvent: type=KeyDown loc=(374,417) time=80302.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:43:09,082 NSEvent: type=KeyDown loc=(374,417) time=80303.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="g" unmodchars="g" repeat=0 keyCode=5
+2014-12-01 20:43:09,210 NSEvent: type=KeyDown loc=(374,417) time=80303.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:43:09,298 NSEvent: type=KeyDown loc=(374,417) time=80303.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="t" unmodchars="t" repeat=0 keyCode=17
+2014-12-01 20:43:09,827 NSEvent: type=KeyDown loc=(374,417) time=80303.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="g" unmodchars="g" repeat=0 keyCode=5
+2014-12-01 20:43:10,170 NSEvent: type=KeyDown loc=(374,417) time=80304.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:43:10,442 NSEvent: type=KeyDown loc=(374,417) time=80304.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:43:10,562 NSEvent: type=KeyDown loc=(374,417) time=80304.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="g" unmodchars="g" repeat=0 keyCode=5
+2014-12-01 20:43:11,043 NSEvent: type=KeyDown loc=(374,417) time=80305.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="n" unmodchars="n" repeat=0 keyCode=45
+2014-12-01 20:43:11,242 NSEvent: type=KeyDown loc=(374,417) time=80305.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="o" unmodchars="o" repeat=0 keyCode=31
+2014-12-01 20:43:11,386 NSEvent: type=KeyDown loc=(374,417) time=80305.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="r" unmodchars="r" repeat=0 keyCode=15
+2014-12-01 20:43:11,410 NSEvent: type=KeyDown loc=(374,417) time=80305.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="e" unmodchars="e" repeat=0 keyCode=14
+2014-12-01 20:43:12,643 NSEvent: type=KeyDown loc=(374,417) time=80306.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=53
+2014-12-01 20:43:13,538 NSEvent: type=KeyDown loc=(374,417) time=80307.5 flags=0x20102 win=0x0 winNum=0 ctxt=0x0 chars=":" unmodchars=":" repeat=0 keyCode=41
+2014-12-01 20:43:13,738 NSEvent: type=KeyDown loc=(374,417) time=80307.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="w" unmodchars="w" repeat=0 keyCode=13
+2014-12-01 20:43:13,779 NSEvent: type=KeyDown loc=(374,417) time=80307.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="q" unmodchars="q" repeat=0 keyCode=12
+2014-12-01 20:43:13,845 NSEvent: type=KeyDown loc=(374,417) time=80307.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:43:17,603 NSEvent: type=KeyDown loc=(374,417) time=80311.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="g" unmodchars="g" repeat=0 keyCode=5
+2014-12-01 20:43:17,658 NSEvent: type=KeyDown loc=(374,417) time=80311.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:43:17,754 NSEvent: type=KeyDown loc=(374,417) time=80311.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="t" unmodchars="t" repeat=0 keyCode=17
+2014-12-01 20:43:17,858 NSEvent: type=KeyDown loc=(374,417) time=80311.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars=" " unmodchars=" " repeat=0 keyCode=49
+2014-12-01 20:43:18,045 NSEvent: type=KeyDown loc=(374,417) time=80312.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="p" unmodchars="p" repeat=0 keyCode=35
+2014-12-01 20:43:18,250 NSEvent: type=KeyDown loc=(374,417) time=80312.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="u" unmodchars="u" repeat=0 keyCode=32
+2014-12-01 20:43:18,586 NSEvent: type=KeyDown loc=(374,417) time=80312.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="s" unmodchars="s" repeat=0 keyCode=1
+2014-12-01 20:43:18,650 NSEvent: type=KeyDown loc=(374,417) time=80312.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="h" unmodchars="h" repeat=0 keyCode=4
+2014-12-01 20:43:18,939 NSEvent: type=KeyDown loc=(374,417) time=80312.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:43:20,562 NSEvent: type=KeyDown loc=(374,417) time=80314.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="j" unmodchars="j" repeat=0 keyCode=38
+2014-12-01 20:43:20,634 NSEvent: type=KeyDown loc=(374,417) time=80314.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="a" unmodchars="a" repeat=0 keyCode=0
+2014-12-01 20:43:20,714 NSEvent: type=KeyDown loc=(374,417) time=80314.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="m" unmodchars="m" repeat=0 keyCode=46
+2014-12-01 20:43:20,826 NSEvent: type=KeyDown loc=(374,417) time=80314.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="e" unmodchars="e" repeat=0 keyCode=14
+2014-12-01 20:43:20,970 NSEvent: type=KeyDown loc=(374,417) time=80315.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="s" unmodchars="s" repeat=0 keyCode=1
+2014-12-01 20:43:21,034 NSEvent: type=KeyDown loc=(374,417) time=80315.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:43:21,146 NSEvent: type=KeyDown loc=(374,417) time=80315.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="o" unmodchars="o" repeat=0 keyCode=31
+2014-12-01 20:43:21,218 NSEvent: type=KeyDown loc=(374,417) time=80315.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="n" unmodchars="n" repeat=0 keyCode=45
+2014-12-01 20:43:21,803 NSEvent: type=KeyDown loc=(374,417) time=80315.8 flags=0x20102 win=0x0 winNum=0 ctxt=0x0 chars="@" unmodchars="@" repeat=0 keyCode=19
+2014-12-01 20:43:22,114 NSEvent: type=KeyDown loc=(374,417) time=80316.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="g" unmodchars="g" repeat=0 keyCode=5
+2014-12-01 20:43:22,218 NSEvent: type=KeyDown loc=(374,417) time=80316.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="m" unmodchars="m" repeat=0 keyCode=46
+2014-12-01 20:43:22,322 NSEvent: type=KeyDown loc=(374,417) time=80316.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="a" unmodchars="a" repeat=0 keyCode=0
+2014-12-01 20:43:22,394 NSEvent: type=KeyDown loc=(374,417) time=80316.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:43:22,570 NSEvent: type=KeyDown loc=(374,417) time=80316.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="l" unmodchars="l" repeat=0 keyCode=37
+2014-12-01 20:43:22,738 NSEvent: type=KeyDown loc=(374,417) time=80316.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:43:22,866 NSEvent: type=KeyDown loc=(374,417) time=80316.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="c" unmodchars="c" repeat=0 keyCode=8
+2014-12-01 20:43:22,946 NSEvent: type=KeyDown loc=(374,417) time=80316.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="o" unmodchars="o" repeat=0 keyCode=31
+2014-12-01 20:43:23,034 NSEvent: type=KeyDown loc=(374,417) time=80317.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="m" unmodchars="m" repeat=0 keyCode=46
+2014-12-01 20:43:23,258 NSEvent: type=KeyDown loc=(374,417) time=80317.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:43:23,946 NSEvent: type=KeyDown loc=(374,417) time=80317.9 flags=0x20102 win=0x0 winNum=0 ctxt=0x0 chars="B" unmodchars="B" repeat=0 keyCode=11
+2014-12-01 20:43:24,155 NSEvent: type=KeyDown loc=(374,417) time=80318.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:43:24,258 NSEvent: type=KeyDown loc=(374,417) time=80318.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="g" unmodchars="g" repeat=0 keyCode=5
+2014-12-01 20:43:24,402 NSEvent: type=KeyDown loc=(374,417) time=80318.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="b" unmodchars="b" repeat=0 keyCode=11
+2014-12-01 20:43:24,498 NSEvent: type=KeyDown loc=(374,417) time=80318.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:43:24,618 NSEvent: type=KeyDown loc=(374,417) time=80318.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="r" unmodchars="r" repeat=0 keyCode=15
+2014-12-01 20:43:24,778 NSEvent: type=KeyDown loc=(374,417) time=80318.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:43:24,962 NSEvent: type=KeyDown loc=(374,417) time=80319.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="1" unmodchars="1" repeat=0 keyCode=18
+2014-12-01 20:43:25,018 NSEvent: type=KeyDown loc=(374,417) time=80319.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="2" unmodchars="2" repeat=0 keyCode=19
+2014-12-01 20:43:25,187 NSEvent: type=KeyDown loc=(374,417) time=80319.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:43:37,658 NSEvent: type=KeyDown loc=(388,247) time=80331.7 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="]" unmodchars="}" repeat=0 keyCode=30
+2014-12-01 20:43:38,226 NSEvent: type=KeyDown loc=(388,247) time=80332.2 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="]" unmodchars="}" repeat=0 keyCode=30
+2014-12-01 20:43:39,058 NSEvent: type=KeyDown loc=(388,247) time=80333.1 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="]" unmodchars="}" repeat=0 keyCode=30
+2014-12-01 20:43:40,178 NSEvent: type=KeyDown loc=(388,247) time=80334.2 flags=0x100108 win=0x0 winNum=0 ctxt=0x0 chars="r" unmodchars="r" repeat=0 keyCode=15
+2014-12-01 20:43:55,242 NSEvent: type=KeyDown loc=(202,419) time=80349.2 flags=0x100508 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:43:57,930 NSEvent: type=KeyDown loc=(202,419) time=80351.9 flags=0x100508 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:43:59,546 NSEvent: type=KeyDown loc=(202,420) time=80353.5 flags=0x100508 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:44:00,386 NSEvent: type=KeyDown loc=(202,420) time=80354.4 flags=0x100508 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:44:00,786 NSEvent: type=KeyDown loc=(202,420) time=80354.8 flags=0x100508 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:44:05,010 NSEvent: type=KeyDown loc=(396,487) time=80359.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="p" unmodchars="p" repeat=0 keyCode=35
+2014-12-01 20:44:05,114 NSEvent: type=KeyDown loc=(396,487) time=80359.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="w" unmodchars="w" repeat=0 keyCode=13
+2014-12-01 20:44:05,162 NSEvent: type=KeyDown loc=(396,487) time=80359.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:44:05,242 NSEvent: type=KeyDown loc=(396,487) time=80359.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:44:06,690 NSEvent: type=KeyDown loc=(396,487) time=80360.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="c" unmodchars="c" repeat=0 keyCode=8
+2014-12-01 20:44:06,729 NSEvent: type=KeyDown loc=(396,487) time=80360.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:44:06,818 NSEvent: type=KeyDown loc=(396,487) time=80360.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars=" " unmodchars=" " repeat=0 keyCode=49
+2014-12-01 20:44:07,145 NSEvent: type=KeyDown loc=(396,487) time=80361.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:44:07,225 NSEvent: type=KeyDown loc=(396,487) time=80361.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="a" unmodchars="a" repeat=0 keyCode=0
+2014-12-01 20:44:07,402 NSEvent: type=KeyDown loc=(396,487) time=80361.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="t" unmodchars="t" repeat=0 keyCode=17
+2014-12-01 20:44:07,546 NSEvent: type=KeyDown loc=(396,487) time=80361.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="a" unmodchars="a" repeat=0 keyCode=0
+2014-12-01 20:44:07,850 NSEvent: type=KeyDown loc=(396,487) time=80361.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:44:08,498 NSEvent: type=KeyDown loc=(396,487) time=80362.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="l" unmodchars="l" repeat=0 keyCode=37
+2014-12-01 20:44:08,561 NSEvent: type=KeyDown loc=(396,487) time=80362.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="s" unmodchars="s" repeat=0 keyCode=1
+2014-12-01 20:44:08,618 NSEvent: type=KeyDown loc=(396,487) time=80362.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:44:11,210 NSEvent: type=KeyDown loc=(396,487) time=80365.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="g" unmodchars="g" repeat=0 keyCode=5
+2014-12-01 20:44:11,266 NSEvent: type=KeyDown loc=(396,487) time=80365.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="e" unmodchars="e" repeat=0 keyCode=14
+2014-12-01 20:44:11,417 NSEvent: type=KeyDown loc=(396,487) time=80365.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="t" unmodchars="t" repeat=0 keyCode=17
+2014-12-01 20:44:11,569 NSEvent: type=KeyDown loc=(396,487) time=80365.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars=" " unmodchars=" " repeat=0 keyCode=49
+2014-12-01 20:44:12,641 NSEvent: type=KeyDown loc=(396,487) time=80366.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:44:12,697 NSEvent: type=KeyDown loc=(396,487) time=80366.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="e" unmodchars="e" repeat=0 keyCode=14
+2014-12-01 20:44:12,817 NSEvent: type=KeyDown loc=(396,487) time=80366.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="l" unmodchars="l" repeat=0 keyCode=37
+2014-12-01 20:44:12,945 NSEvent: type=KeyDown loc=(396,487) time=80366.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="e" unmodchars="e" repeat=0 keyCode=14
+2014-12-01 20:44:13,105 NSEvent: type=KeyDown loc=(396,487) time=80367.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="t" unmodchars="t" repeat=0 keyCode=17
+2014-12-01 20:44:13,217 NSEvent: type=KeyDown loc=(396,487) time=80367.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="e" unmodchars="e" repeat=0 keyCode=14
+2014-12-01 20:44:13,551 NSEvent: type=KeyDown loc=(396,487) time=80367.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars=" " unmodchars=" " repeat=0 keyCode=49
+2014-12-01 20:44:15,018 NSEvent: type=KeyDown loc=(396,487) time=80369.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="k" unmodchars="k" repeat=0 keyCode=40
+2014-12-01 20:44:15,297 NSEvent: type=KeyDown loc=(396,487) time=80369.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="e" unmodchars="e" repeat=0 keyCode=14
+2014-12-01 20:44:15,497 NSEvent: type=KeyDown loc=(396,487) time=80369.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="y" unmodchars="y" repeat=0 keyCode=16
+2014-12-01 20:44:15,593 NSEvent: type=KeyDown loc=(396,487) time=80369.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:44:16,193 NSEvent: type=KeyDown loc=(396,487) time=80370.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:44:17,461 NSEvent: type=KeyDown loc=(396,487) time=80371.5 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=126
+2014-12-01 20:44:17,585 NSEvent: type=KeyDown loc=(396,487) time=80371.6 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:18,086 NSEvent: type=KeyDown loc=(396,487) time=80372.1 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:18,171 NSEvent: type=KeyDown loc=(396,487) time=80372.2 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:18,255 NSEvent: type=KeyDown loc=(396,487) time=80372.3 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:18,339 NSEvent: type=KeyDown loc=(396,487) time=80372.3 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:18,424 NSEvent: type=KeyDown loc=(396,487) time=80372.4 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:18,508 NSEvent: type=KeyDown loc=(396,487) time=80372.5 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:18,593 NSEvent: type=KeyDown loc=(396,487) time=80372.6 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:18,677 NSEvent: type=KeyDown loc=(396,487) time=80372.7 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:18,761 NSEvent: type=KeyDown loc=(396,487) time=80372.8 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:18,846 NSEvent: type=KeyDown loc=(396,487) time=80372.8 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:18,930 NSEvent: type=KeyDown loc=(396,487) time=80372.9 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:19,014 NSEvent: type=KeyDown loc=(396,487) time=80373.0 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:19,098 NSEvent: type=KeyDown loc=(396,487) time=80373.1 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:19,182 NSEvent: type=KeyDown loc=(396,487) time=80373.2 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:19,265 NSEvent: type=KeyDown loc=(396,487) time=80373.3 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:19,350 NSEvent: type=KeyDown loc=(396,487) time=80373.3 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=1 keyCode=123
+2014-12-01 20:44:19,722 NSEvent: type=KeyDown loc=(396,487) time=80373.7 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:20,553 NSEvent: type=KeyDown loc=(396,487) time=80374.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:44:20,585 NSEvent: type=KeyDown loc=(396,487) time=80374.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:44:20,737 NSEvent: type=KeyDown loc=(396,487) time=80374.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:44:23,306 NSEvent: type=KeyDown loc=(396,487) time=80377.3 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=126
+2014-12-01 20:44:23,521 NSEvent: type=KeyDown loc=(396,487) time=80377.5 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:23,697 NSEvent: type=KeyDown loc=(396,487) time=80377.7 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:23,849 NSEvent: type=KeyDown loc=(396,487) time=80377.8 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:23,977 NSEvent: type=KeyDown loc=(396,487) time=80378.0 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:24,097 NSEvent: type=KeyDown loc=(396,487) time=80378.1 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:24,209 NSEvent: type=KeyDown loc=(396,487) time=80378.2 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:24,289 NSEvent: type=KeyDown loc=(396,487) time=80378.3 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:24,401 NSEvent: type=KeyDown loc=(396,487) time=80378.4 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:24,514 NSEvent: type=KeyDown loc=(396,487) time=80378.5 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:24,633 NSEvent: type=KeyDown loc=(396,487) time=80378.6 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:44:24,977 NSEvent: type=KeyDown loc=(396,487) time=80379.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:44:25,113 NSEvent: type=KeyDown loc=(396,487) time=80379.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:44:25,241 NSEvent: type=KeyDown loc=(396,487) time=80379.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:44:25,384 NSEvent: type=KeyDown loc=(396,487) time=80379.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:44:25,489 NSEvent: type=KeyDown loc=(396,487) time=80379.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:44:25,946 NSEvent: type=KeyDown loc=(396,487) time=80379.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:44:26,153 NSEvent: type=KeyDown loc=(396,487) time=80380.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="r" unmodchars="r" repeat=0 keyCode=15
+2014-12-01 20:44:26,225 NSEvent: type=KeyDown loc=(396,487) time=80380.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="e" unmodchars="e" repeat=0 keyCode=14
+2014-12-01 20:44:26,369 NSEvent: type=KeyDown loc=(396,487) time=80380.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="m" unmodchars="m" repeat=0 keyCode=46
+2014-12-01 20:44:26,489 NSEvent: type=KeyDown loc=(396,487) time=80380.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="o" unmodchars="o" repeat=0 keyCode=31
+2014-12-01 20:44:26,577 NSEvent: type=KeyDown loc=(396,487) time=80380.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="v" unmodchars="v" repeat=0 keyCode=9
+2014-12-01 20:44:26,697 NSEvent: type=KeyDown loc=(396,487) time=80380.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="e" unmodchars="e" repeat=0 keyCode=14
+2014-12-01 20:44:27,169 NSEvent: type=KeyDown loc=(396,487) time=80381.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:44:33,610 NSEvent: type=KeyDown loc=(396,487) time=80387.6 flags=0x100508 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:45:00,713 NSEvent: type=KeyDown loc=(253,437) time=80414.7 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="]" unmodchars="}" repeat=0 keyCode=30
+2014-12-01 20:45:00,881 NSEvent: type=KeyDown loc=(253,437) time=80414.9 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="]" unmodchars="}" repeat=0 keyCode=30
+2014-12-01 20:45:01,070 NSEvent: type=KeyDown loc=(253,437) time=80415.0 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="]" unmodchars="}" repeat=0 keyCode=30
+2014-12-01 20:45:01,601 NSEvent: type=KeyDown loc=(253,437) time=80415.6 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="]" unmodchars="}" repeat=0 keyCode=30
+2014-12-01 20:45:02,553 NSEvent: type=KeyDown loc=(253,437) time=80416.5 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="[" unmodchars="{" repeat=0 keyCode=33
+2014-12-01 20:45:02,753 NSEvent: type=KeyDown loc=(253,437) time=80416.7 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="[" unmodchars="{" repeat=0 keyCode=33
+2014-12-01 20:45:03,153 NSEvent: type=KeyDown loc=(253,437) time=80417.1 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="[" unmodchars="{" repeat=0 keyCode=33
+2014-12-01 20:45:04,073 NSEvent: type=KeyDown loc=(253,437) time=80418.1 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="]" unmodchars="}" repeat=0 keyCode=30
+2014-12-01 20:45:04,265 NSEvent: type=KeyDown loc=(253,437) time=80418.3 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="]" unmodchars="}" repeat=0 keyCode=30
+2014-12-01 20:45:04,401 NSEvent: type=KeyDown loc=(253,437) time=80418.4 flags=0x12010a win=0x0 winNum=0 ctxt=0x0 chars="]" unmodchars="}" repeat=0 keyCode=30
+2014-12-01 20:45:05,177 NSEvent: type=KeyDown loc=(253,437) time=80419.2 flags=0x100508 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:45:05,753 NSEvent: type=KeyDown loc=(253,437) time=80419.7 flags=0x100508 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:45:48,410 NSEvent: type=KeyDown loc=(346,352) time=80462.4 flags=0x100508 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:45:50,129 NSEvent: type=KeyDown loc=(346,352) time=80464.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="p" unmodchars="p" repeat=0 keyCode=35
+2014-12-01 20:45:50,176 NSEvent: type=KeyDown loc=(346,352) time=80464.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="w" unmodchars="w" repeat=0 keyCode=13
+2014-12-01 20:45:50,224 NSEvent: type=KeyDown loc=(346,352) time=80464.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:45:50,320 NSEvent: type=KeyDown loc=(346,352) time=80464.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:45:51,152 NSEvent: type=KeyDown loc=(346,352) time=80465.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="c" unmodchars="c" repeat=0 keyCode=8
+2014-12-01 20:45:51,201 NSEvent: type=KeyDown loc=(346,352) time=80465.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:45:51,274 NSEvent: type=KeyDown loc=(346,352) time=80465.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars=" " unmodchars=" " repeat=0 keyCode=49
+2014-12-01 20:45:51,545 NSEvent: type=KeyDown loc=(346,352) time=80465.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:45:51,688 NSEvent: type=KeyDown loc=(346,352) time=80465.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:45:51,968 NSEvent: type=KeyDown loc=(346,352) time=80466.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="/" unmodchars="/" repeat=0 keyCode=44
+2014-12-01 20:45:52,529 NSEvent: type=KeyDown loc=(346,352) time=80466.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:45:52,968 NSEvent: type=KeyDown loc=(346,352) time=80467.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="g" unmodchars="g" repeat=0 keyCode=5
+2014-12-01 20:45:53,145 NSEvent: type=KeyDown loc=(346,352) time=80467.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:45:53,440 NSEvent: type=KeyDown loc=(346,352) time=80467.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:45:54,506 NSEvent: type=KeyDown loc=(346,352) time=80468.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="c" unmodchars="c" repeat=0 keyCode=8
+2014-12-01 20:45:54,536 NSEvent: type=KeyDown loc=(346,352) time=80468.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:45:54,639 NSEvent: type=KeyDown loc=(346,352) time=80468.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars=" " unmodchars=" " repeat=0 keyCode=49
+2014-12-01 20:45:54,792 NSEvent: type=KeyDown loc=(346,352) time=80468.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:45:54,856 NSEvent: type=KeyDown loc=(346,352) time=80468.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="n" unmodchars="n" repeat=0 keyCode=45
+2014-12-01 20:45:54,936 NSEvent: type=KeyDown loc=(346,352) time=80468.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:45:55,136 NSEvent: type=KeyDown loc=(346,352) time=80469.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:45:55,976 NSEvent: type=KeyDown loc=(346,352) time=80470.0 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=126
+2014-12-01 20:45:56,296 NSEvent: type=KeyDown loc=(346,352) time=80470.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="f" unmodchars="f" repeat=0 keyCode=3
+2014-12-01 20:45:56,424 NSEvent: type=KeyDown loc=(346,352) time=80470.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:45:56,640 NSEvent: type=KeyDown loc=(346,352) time=80470.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:45:57,432 NSEvent: type=KeyDown loc=(346,352) time=80471.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="l" unmodchars="l" repeat=0 keyCode=37
+2014-12-01 20:45:57,464 NSEvent: type=KeyDown loc=(346,352) time=80471.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="s" unmodchars="s" repeat=0 keyCode=1
+2014-12-01 20:45:57,552 NSEvent: type=KeyDown loc=(346,352) time=80471.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:45:58,865 NSEvent: type=KeyDown loc=(346,352) time=80472.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="v" unmodchars="v" repeat=0 keyCode=9
+2014-12-01 20:45:58,928 NSEvent: type=KeyDown loc=(346,352) time=80472.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:45:59,008 NSEvent: type=KeyDown loc=(346,352) time=80473.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars=" " unmodchars=" " repeat=0 keyCode=49
+2014-12-01 20:45:59,488 NSEvent: type=KeyDown loc=(346,352) time=80473.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:45:59,560 NSEvent: type=KeyDown loc=(346,352) time=80473.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:46:00,473 NSEvent: type=KeyDown loc=(346,352) time=80474.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="g" unmodchars="g" repeat=0 keyCode=5
+2014-12-01 20:46:00,640 NSEvent: type=KeyDown loc=(346,352) time=80474.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="	" unmodchars="	" repeat=0 keyCode=48
+2014-12-01 20:46:00,960 NSEvent: type=KeyDown loc=(346,352) time=80474.9 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:46:02,016 NSEvent: type=KeyDown loc=(346,352) time=80476.0 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=124
+2014-12-01 20:46:02,416 NSEvent: type=KeyDown loc=(346,352) time=80476.4 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=123
+2014-12-01 20:46:03,240 NSEvent: type=KeyDown loc=(346,352) time=80477.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:46:04,656 NSEvent: type=KeyDown loc=(346,352) time=80478.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="/" unmodchars="/" repeat=0 keyCode=44
+2014-12-01 20:46:05,616 NSEvent: type=KeyDown loc=(346,352) time=80479.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=53
+2014-12-01 20:46:06,692 NSEvent: type=KeyDown loc=(346,352) time=80480.7 flags=0x20102 win=0x0 winNum=0 ctxt=0x0 chars="A" unmodchars="A" repeat=0 keyCode=0
+2014-12-01 20:46:07,640 NSEvent: type=KeyDown loc=(346,352) time=80481.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:46:08,280 NSEvent: type=KeyDown loc=(346,352) time=80482.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:46:09,424 NSEvent: type=KeyDown loc=(346,352) time=80483.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=53
+2014-12-01 20:46:09,856 NSEvent: type=KeyDown loc=(346,352) time=80483.9 flags=0x20102 win=0x0 winNum=0 ctxt=0x0 chars=":" unmodchars=":" repeat=0 keyCode=41
+2014-12-01 20:46:10,184 NSEvent: type=KeyDown loc=(346,352) time=80484.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="w" unmodchars="w" repeat=0 keyCode=13
+2014-12-01 20:46:10,224 NSEvent: type=KeyDown loc=(346,352) time=80484.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="q" unmodchars="q" repeat=0 keyCode=12
+2014-12-01 20:46:10,325 NSEvent: type=KeyDown loc=(346,352) time=80484.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:46:12,584 NSEvent: type=KeyDown loc=(346,352) time=80486.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="g" unmodchars="g" repeat=0 keyCode=5
+2014-12-01 20:46:12,672 NSEvent: type=KeyDown loc=(346,352) time=80486.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="e" unmodchars="e" repeat=0 keyCode=14
+2014-12-01 20:46:13,072 NSEvent: type=KeyDown loc=(346,352) time=80487.1 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:46:13,370 NSEvent: type=KeyDown loc=(346,352) time=80487.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="i" unmodchars="i" repeat=0 keyCode=34
+2014-12-01 20:46:13,712 NSEvent: type=KeyDown loc=(346,352) time=80487.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="t" unmodchars="t" repeat=0 keyCode=17
+2014-12-01 20:46:14,272 NSEvent: type=KeyDown loc=(346,352) time=80488.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars=" " unmodchars=" " repeat=0 keyCode=49
+2014-12-01 20:46:14,544 NSEvent: type=KeyDown loc=(346,352) time=80488.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="c" unmodchars="c" repeat=0 keyCode=8
+2014-12-01 20:46:14,632 NSEvent: type=KeyDown loc=(346,352) time=80488.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="o" unmodchars="o" repeat=0 keyCode=31
+2014-12-01 20:46:14,752 NSEvent: type=KeyDown loc=(346,352) time=80488.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="m" unmodchars="m" repeat=0 keyCode=46
+2014-12-01 20:46:15,600 NSEvent: type=KeyDown loc=(346,352) time=80489.6 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=126
+2014-12-01 20:46:16,000 NSEvent: type=KeyDown loc=(346,352) time=80490.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:46:18,296 NSEvent: type=KeyDown loc=(346,352) time=80492.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="c" unmodchars="c" repeat=0 keyCode=8
+2014-12-01 20:46:18,338 NSEvent: type=KeyDown loc=(346,352) time=80492.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:46:18,408 NSEvent: type=KeyDown loc=(346,352) time=80492.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars=" " unmodchars=" " repeat=0 keyCode=49
+2014-12-01 20:46:18,552 NSEvent: type=KeyDown loc=(346,352) time=80492.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:46:18,680 NSEvent: type=KeyDown loc=(346,352) time=80492.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:46:18,816 NSEvent: type=KeyDown loc=(346,352) time=80492.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:46:18,976 NSEvent: type=KeyDown loc=(346,352) time=80493.0 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="/" unmodchars="/" repeat=0 keyCode=44
+2014-12-01 20:46:19,712 NSEvent: type=KeyDown loc=(346,352) time=80493.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:46:19,840 NSEvent: type=KeyDown loc=(346,352) time=80493.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=51
+2014-12-01 20:46:20,184 NSEvent: type=KeyDown loc=(346,352) time=80494.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="/" unmodchars="/" repeat=0 keyCode=44
+2014-12-01 20:46:20,720 NSEvent: type=KeyDown loc=(346,352) time=80494.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:46:21,608 NSEvent: type=KeyDown loc=(346,352) time=80495.6 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="p" unmodchars="p" repeat=0 keyCode=35
+2014-12-01 20:46:21,672 NSEvent: type=KeyDown loc=(346,352) time=80495.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="w" unmodchars="w" repeat=0 keyCode=13
+2014-12-01 20:46:21,720 NSEvent: type=KeyDown loc=(346,352) time=80495.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:46:21,792 NSEvent: type=KeyDown loc=(346,352) time=80495.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:46:22,696 NSEvent: type=KeyDown loc=(346,352) time=80496.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="c" unmodchars="c" repeat=0 keyCode=8
+2014-12-01 20:46:22,744 NSEvent: type=KeyDown loc=(346,352) time=80496.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="d" unmodchars="d" repeat=0 keyCode=2
+2014-12-01 20:46:22,824 NSEvent: type=KeyDown loc=(346,352) time=80496.8 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars=" " unmodchars=" " repeat=0 keyCode=49
+2014-12-01 20:46:23,224 NSEvent: type=KeyDown loc=(346,352) time=80497.2 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:46:23,344 NSEvent: type=KeyDown loc=(346,352) time=80497.3 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="." unmodchars="." repeat=0 keyCode=47
+2014-12-01 20:46:23,504 NSEvent: type=KeyDown loc=(346,352) time=80497.5 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="/" unmodchars="/" repeat=0 keyCode=44
+2014-12-01 20:46:23,680 NSEvent: type=KeyDown loc=(346,352) time=80497.7 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36
+2014-12-01 20:46:24,240 NSEvent: type=KeyDown loc=(346,352) time=80498.2 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=126
+2014-12-01 20:46:24,416 NSEvent: type=KeyDown loc=(346,352) time=80498.4 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=126
+2014-12-01 20:46:24,536 NSEvent: type=KeyDown loc=(346,352) time=80498.5 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=126
+2014-12-01 20:46:25,000 NSEvent: type=KeyDown loc=(346,352) time=80499.0 flags=0xa00100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=126
+2014-12-01 20:46:25,440 NSEvent: type=KeyDown loc=(346,352) time=80499.4 flags=0x100 win=0x0 winNum=0 ctxt=0x0 chars="" unmodchars="" repeat=0 keyCode=36

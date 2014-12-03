@@ -2,6 +2,7 @@
   <label>Clicks!</label>
   <row>
     <panel>
+      <title>Clicks by Application</title>
       <input type="time" token="chart_time" searchWhenChanged="true">
         <label></label>
         <default>
@@ -11,7 +12,7 @@
       </input>
       <chart>
         <search>
-          <query>index=clicks | timechart max(cps) by app minspan=1s</query>
+          <query>index="keystrokes" type=LMouseDown | bucket _time span=1s | timechart count(pressure) by app</query>
           <earliest>$chart_time.earliest$</earliest>
           <latest>$chart_time.latest$</latest>
         </search>
@@ -41,6 +42,7 @@
   </row>
   <row>
     <panel>
+      <title>Total Clicks!</title>
       <input type="time" token="table_time">
         <label></label>
         <default>
@@ -50,7 +52,7 @@
       </input>
       <table>
         <search>
-          <query>index=clicks | stats sum(cps) by app | rename sum(cps) AS "Total Clicks" | sort - "Total Clicks"</query>
+          <query>index="keystrokes" type=LMouseDown | stats count(pressure) as "Total Clicks" by app | sort - "Total Clicks" | addcoltotals col=t labelfield=" " label="Grand Total"</query>
           <earliest>$table_time.earliest$</earliest>
           <latest>$table_time.latest$</latest>
         </search>
@@ -58,7 +60,7 @@
         <option name="rowNumbers">false</option>
         <option name="dataOverlayMode">none</option>
         <option name="drilldown">cell</option>
-        <option name="count">10</option>
+        <option name="count">25</option>
       </table>
     </panel>
   </row>

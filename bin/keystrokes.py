@@ -26,6 +26,7 @@ def handler(event):
     try:
         # logging.info(str(event))
 	activeAppName = NSWorkspace.sharedWorkspace().activeApplication()['NSApplicationName']
+        ### The string replacement is necessary for characters that cause Splunk to end the the line prematurely.
         logging.info(' app="' + str(activeAppName) + '" ' + str(event).replace('\r', '<RETURN>').replace('\n', '<NEWLINE>').replace('\t', '<TAB>').replace('\" \"', '\"<SPACE>\"'))
     except UnicodeEncodeError as e:
 	# logging.info(event.encode('ascii', 'xmlcharrefreplace'))

@@ -1,0 +1,21 @@
+<dashboard script="autodiscover.js">
+    <label>D3 Force-Directed Graph: Mouse Movement</label>
+    <row>
+        <html>
+            <div id="custom"
+                 class="splunk-view"
+                 data-require="app/stream_splunk_usage_demo/components/forcedirected/forcedirected"
+                 data-options='{
+                        "managerid": "search1"
+                    }'
+                 style="height: 500px;">
+            </div>
+        </html>
+        <table id="table1">
+            <searchString>
+                index=_internal sourcetype=splunk_web_access uri_path=*/app/* NOT uri_path=*/static/* | table uri_path referer | rex field=referer &quot;https?://[^/]+(?&lt;source&gt;/[^\?]*)&quot; | rename uri_path as target | stats count by source,target | sort count
+            </searchString>
+            <earliestTime>-24h</earliestTime>
+        </table>
+    </row>
+</dashboard>

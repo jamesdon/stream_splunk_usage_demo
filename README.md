@@ -43,29 +43,14 @@ Replace rshrd with vprvt
 This may not be a proper replacement, but it fixes it enough to get data in this dashboard.
 
 
-### Clicks!:
-
-This dashboard is fueled by the clickcounter.py script in the bin dir.  There are a couple of things you need 
-to do to enure everything works as expected.  I plan on automating more of these functions as soon as I can 
-figure it out.
-
-1) The monitor stanza assumes that you are using the same default sirectory that I am:
-
-	/opt/splunk/etc/apps/stream_splunk_usage_demo/data/output.log
-
-2) The script needs to be launched manually to start tracking clicks.  It takes about 5 seconds to begin recording.
-
-	/opt/splunk/etc/apps/stream_splunk_usage_demo/bin/clickcounter.py &
-
-
-### Keys!:
+### Clicks! and Keys!:
 
 To enable keyboard tracking, you must allow the Terminal App to control your computer.  To do this:
 System Preferences -> Security & Privacy -> Privacy (tab) -> Accessibility (in column) -> Add Terminal.app 
 
 Also be sure to ensure there is a check mark next to it.
 
-This dashboard is fueled by the keystrokes.py script in the bin dir.  There are a couple of things you need
+These dashboards are fueled by the keystrokes.py script in the bin dir.  There are a couple of things you need
 to do to enure everything works as expected.  I plan on automating more of these functions as soon as I can
 figure it out.
 
@@ -79,6 +64,8 @@ figure it out.
 
 
 ### Wish list:
-Merge keyboard strokes with trackpad clicks
-Add window resizing
+Tag Cloud dash for most popular words
+Merge keyboard clicks with control key clicks
 Add trackpad distance traveled
+Add window resizing
+Force Directed dash  based on mouse movement

@@ -2,7 +2,7 @@
   <label>Keys!</label>
   <row>
     <panel>
-      <input type="time" token="chart.time">
+      <input type="time" token="chart.time" searchWhenChanged="true">
         <label></label>
         <default>
           <earliest>rt-5m</earliest>

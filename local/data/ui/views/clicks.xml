@@ -12,7 +12,7 @@
       </input>
       <chart>
         <search>
-          <query>index="keystrokes" type=LMouseDown | bucket _time span=1s | timechart count(pressure) by app</query>
+          <query>index="mouse" type=LMouseDown | bucket _time span=1s | timechart count(pressure) by app</query>
           <earliest>$chart_time.earliest$</earliest>
           <latest>$chart_time.latest$</latest>
         </search>

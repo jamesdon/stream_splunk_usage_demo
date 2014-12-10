@@ -1,28 +1,28 @@
-keyCode,keyName,chars
-36,"<RETURN>",
-48,"<TAB>",
-49,"<SPACE>",
-51,"<DELETE>",
-52,"<ENTER>",
-53,"<ESCAPE>",
-54,"<R COMMAND>",
-55,"<L COMMAND>",
-56,"<L SHIFT>",
-57,"<CAPLOCKS>",
-58,"<L ALT>",
-59,"<CONTROL>",
-60,"<R SHIFT>",
-61,"<R ALT>",
-63,"<FN>",
-71,"<CLEAR>",
-76,"<ENTER>",
-114,"<HELP>",
-115,"<HOME>",
-116,"<P UP>",
-117,"<DELETE>",
-119,"<END>",
-121,"<P DOWN>",
-123,"<L ARROW>",
-124,"<R ARROW>",
-125,"<D ARROW>",
-126,"<U ARROW>",
+keyCode,keyName,chars,shortKeyName
+36,"<RETURN>",,"<\r>"
+48,"<TAB>",,"<\t>"
+49,"<SPACE>",,"<\s>"
+51,"<DELETE>",,"<del>"
+52,"<ENTER>",,"<\n>"
+53,"<ESCAPE>",,"<esc>"
+54,"<R COMMAND>",,"<cmd>"
+55,"<L COMMAND>",,"<cmd>"
+56,"<L SHIFT>",,"<shft>"
+57,"<CAPLOCKS>",,"<caps>"
+58,"<L ALT>",,"<alt>"
+59,"<CONTROL>",,"<ctl>"
+60,"<R SHIFT>",,"<shft>"
+61,"<R ALT>",,"<alt>"
+63,"<FN>",,"<fn>"
+71,"<CLEAR>",,"<clr>"
+76,"<ENTER>",,"<\n>"
+114,"<HELP>",,"<help>"
+115,"<HOME>",,"<home>"
+116,"<P UP>",,"<up>"
+117,"<DELETE>",,"<del>"
+119,"<END>",,"<end>"
+121,"<P DOWN>",,"<down>"
+123,"<L ARROW>",,"<left>"
+124,"<R ARROW>",,"<right>"
+125,"<D ARROW>",,"<down>"
+126,"<U ARROW>",,"<up>"

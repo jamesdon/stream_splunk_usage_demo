@@ -45,27 +45,22 @@ This may not be a proper replacement, but it fixes it enough to get data in this
 
 ### Clicks! and Keys!:
 
+--->> Supported on OS X only!!!  Developed using Yosemite.  No plans for further expansion for other OSs. <<---
+
 To enable keyboard tracking, you must allow the Terminal App to control your computer.  To do this:
 System Preferences -> Security & Privacy -> Privacy (tab) -> Accessibility (in column) -> Add Terminal.app 
 
 Also be sure to ensure there is a check mark next to it.
 
-These dashboards are fueled by the keystrokes.py script in the bin dir.  There are a couple of things you need
-to do to enure everything works as expected.  I plan on automating more of these functions as soon as I can
-figure it out.
+These dashboards are fueled by the keystrokes.py script in the bin dir.  The script needs to be launched manually to start tracking clicks.  It takes about 5 seconds to begin recording.  To stop it, you need to kill it. 
 
-1) The monitor stanza assumes that you are using the same default sirectory that I am:
-
-        /opt/splunk/etc/apps/stream_splunk_usage_demo/data/keys.log
-
-2) The script needs to be launched manually to start tracking clicks.  It takes about 5 seconds to begin recording.
+Due to its evil nature, I will not start this automatically.  This is also why the default data retention time for keystrokes is very low.  Feel free to change any of this on your own.
 
         /opt/splunk/etc/apps/stream_splunk_usage_demo/bin/keystrokes.py &
 
 
 ### Wish list:
 Tag Cloud dash for most popular words
-Merge keyboard clicks with control key clicks
 Add trackpad distance traveled
 Add window resizing
 Force Directed dash  based on mouse movement

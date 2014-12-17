@@ -1,20 +1,22 @@
 <form>
-  <label>Clicks!</label>
+  <label>Clicks vs. Strokes</label>
+  <fieldset submitButton="false">
+    <input type="time" token="time.tok">
+      <label></label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+  </fieldset>
   <row>
     <panel>
-      <title>Clicks by Application</title>
-      <input type="time" token="chart_time" searchWhenChanged="true">
-        <label></label>
-        <default>
-          <earliest>rt-30m</earliest>
-          <latest>rt</latest>
-        </default>
-      </input>
+      <title>Count over Time</title>
       <chart>
         <search>
-          <query>index="mouse" type=LMouseDown | bucket _time span=1s | timechart count(pressure) by app</query>
-          <earliest>$chart_time.earliest$</earliest>
-          <latest>$chart_time.latest$</latest>
+          <query>index="keystrokes" type=LMouseDown | bucket _time span=1s | timechart count(pressure) as Clicks | appendcols [search index="keystrokes" type=KeyDown | bucket _time span=1s | timechart count(type) as Strokes]</query>
+          <earliest>$time.tok.earliest$</earliest>
+          <latest>$time.tok.latest$</latest>
         </search>
         <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
         <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
@@ -25,11 +27,11 @@
         <option name="charting.axisY.scale">linear</option>
         <option name="charting.axisY2.enabled">false</option>
         <option name="charting.axisY2.scale">inherit</option>
-        <option name="charting.chart">area</option>
+        <option name="charting.chart">line</option>
         <option name="charting.chart.bubbleMaximumSize">50</option>
         <option name="charting.chart.bubbleMinimumSize">10</option>
         <option name="charting.chart.bubbleSizeBy">area</option>
-        <option name="charting.chart.nullValueMode">zero</option>
+        <option name="charting.chart.nullValueMode">gaps</option>
         <option name="charting.chart.sliceCollapsingThreshold">0.01</option>
         <option name="charting.chart.stackMode">default</option>
         <option name="charting.chart.style">shiny</option>
@@ -42,25 +44,18 @@
   </row>
   <row>
     <panel>
-      <title>Total Clicks!</title>
-      <input type="time" token="table_time">
-        <label></label>
-        <default>
-          <earliest>-24h@h</earliest>
-          <latest>now</latest>
-        </default>
-      </input>
+      <title>Count by Application</title>
       <table>
         <search>
-          <query>index="mouse" type=LMouseDown | stats count(pressure) as "Total Clicks" by app | sort - "Total Clicks" | addcoltotals col=t labelfield=" " label="Grand Total"</query>
-          <earliest>$table_time.earliest$</earliest>
-          <latest>$table_time.latest$</latest>
+          <query>index="keystrokes" type=LMouseDown | bucket _time span=1s | stats count(pressure) as Clicks by app | join app [search index="keystrokes" type=KeyDown | bucket _time span=1s | stats count(type) as Strokes by app ] | sort - app</query>
+          <earliest>$time.tok.earliest$</earliest>
+          <latest>$time.tok.latest$</latest>
         </search>
         <option name="wrap">true</option>
         <option name="rowNumbers">false</option>
         <option name="dataOverlayMode">none</option>
         <option name="drilldown">cell</option>
-        <option name="count">25</option>
+        <option name="count">10</option>
       </table>
     </panel>
   </row>

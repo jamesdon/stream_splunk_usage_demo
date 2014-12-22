@@ -5,6 +5,7 @@
   <view name="system_performance" />
   <view name="clicks" />
   <view name="keys" />
+  <view name="clicks_vs_keys"/>
   <view name="search" />
   <view name="dashboards" />
 </nav>

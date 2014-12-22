@@ -12,7 +12,7 @@
       <table>
         <title>Keystrokes</title>
         <search>
-          <query>index="keystrokes" type=KeyDown | eval keystone="&lt;&lt;&lt;" + sourcetype + "&gt;&gt;&gt;" | transaction endswith="keyCode=36 OR keyCode=49 OR keyCode=52 OR keyCode=76 OR keyCode=115 OR keyCode=116 OR keyCode=119 OR keyCode=121 OR keyCode=123 OR keyCode=124 OR keyCode=125 OR keyCode=126" mvlist=true keeporphans=true | strcat chars keystone word | rex mode=sed field=word "s/(\&lt;\&lt;\&lt;keystrokes\&gt;\&gt;\&gt;)//g" | table word app | rex mode=sed field=word "s/\s(?!\&lt;)//g"</query>
+          <query>index="keystrokes" type=KeyDown OR type=FlagsChanged | eval keystone="&lt;&lt;&lt;" + sourcetype + "&gt;&gt;&gt;" | transaction endswith="keyCode=36 OR keyCode=49 OR keyCode=52 OR keyCode=76 OR keyCode=115 OR keyCode=116 OR keyCode=119 OR keyCode=121 OR keyCode=123 OR keyCode=124 OR keyCode=125 OR keyCode=126" mvlist=true keeporphans=true | strcat chars keystone word | rex mode=sed field=word "s/(\&lt;\&lt;\&lt;keystrokes\&gt;\&gt;\&gt;)//g" | table word app | rex mode=sed field=word "s/\s(?!\&lt;|\&gt;)//g"</query>
           <earliest>$chart.time.earliest$</earliest>
           <latest>$chart.time.latest$</latest>
         </search>

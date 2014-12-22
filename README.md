@@ -64,3 +64,4 @@ Tag Cloud dash for most popular words
 Add trackpad distance traveled
 Add window resizing
 Force Directed dash  based on mouse movement
+Add simple / verbose check box for RT keystrokes

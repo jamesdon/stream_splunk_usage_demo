@@ -1,21 +1,30 @@
-<dashboard script="autodiscover.js">
-    <label>D3 Force-Directed Graph: Mouse Movement</label>
-    <row>
-        <html>
-            <div id="custom"
-                 class="splunk-view"
-                 data-require="app/stream_splunk_usage_demo/components/forcedirected/forcedirected"
-                 data-options='{
-                        "managerid": "search1"
-                    }'
-                 style="height: 500px;">
+<form script="autodiscover.js">
+  <label>D3 Force-Directed Graph: Splunkweb view navigation</label>
+  <fieldset submitButton="false">
+    <input type="time" token="time_tok">
+      <label></label>
+      <default>
+        <earliest>rt-30s</earliest>
+        <latest>rt</latest>
+      </default>
+    </input>
+  </fieldset>
+  <row>
+    <html>
+            <div id="custom" class="splunk-view" data-require="app/simple_xml_examples/components/forcedirected/forcedirected" data-options="{                         &quot;managerid&quot;: &quot;search1&quot;                     }" style="height: 500px;">
             </div>
         </html>
-        <table id="table1">
-            <searchString>
-                index=_internal sourcetype=splunk_web_access uri_path=*/app/* NOT uri_path=*/static/* | table uri_path referer | rex field=referer &quot;https?://[^/]+(?&lt;source&gt;/[^\?]*)&quot; | rename uri_path as target | stats count by source,target | sort count
-            </searchString>
-            <earliestTime>-24h</earliestTime>
-        </table>
-    </row>
-</dashboard>
+    <table id="table1">
+      <search>
+        <query>index=mouse type=MouseMoved | rex "loc=\((?&lt;source&gt;[^\,]+),(?&lt;target&gt;[^\)]+)\)" | table source, target, time</query>
+        <earliest>$time_tok.earliest$</earliest>
+        <latest>$time_tok.latest$</latest>
+      </search>
+      <option name="wrap">true</option>
+      <option name="rowNumbers">false</option>
+      <option name="dataOverlayMode">none</option>
+      <option name="drilldown">cell</option>
+      <option name="count">10</option>
+    </table>
+  </row>
+</form>

@@ -92,11 +92,11 @@ define(function(require, exports, module) {
             data: 'preview',
             panAndZoom: true,
             directional: true,
-            valueField: 'count',
-            charges: -500,
-            gravity: 0.2,
-            linkDistance: 15,
-            swoop: false,
+            valueField: 'time',
+            charges: 0,
+            gravity: 100000000,
+            linkDistance: 0,
+            swoop: true,
             isStatic: true
         },
 

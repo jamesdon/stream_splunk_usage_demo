@@ -1,8 +1,15 @@
 <form>
   <label>Clicks vs. Key Strokes</label>
   <fieldset submitButton="false">
-    <input type="time" token="time.tok">
-      <label></label>
+    <input type="time" token="time.tok.chart" searchWhenChanged="true">
+      <label>Charts</label>
+      <default>
+        <earliest>rt-5m</earliest>
+        <latest>rt</latest>
+      </default>
+    </input>
+    <input type="time" token="time.tok.table" searchWhenChanged="true">
+      <label>Tables</label>
       <default>
         <earliest>-24h@h</earliest>
         <latest>now</latest>
@@ -11,13 +18,15 @@
   </fieldset>
   <row>
     <panel>
-      <title>Counts over Time</title>
+      <title>Clicks vs. Key Strokes</title>
       <chart>
         <search>
-          <query>index=mouse type=LMouseDown | bucket _time span=1s | timechart count(pressure) as Clicks | appendcols [search index="keystrokes" type=KeyDown | bucket _time span=1s | timechart count(type) as "Key Strokes"]</query>
-          <earliest>$time.tok.earliest$</earliest>
-          <latest>$time.tok.latest$</latest>
+          <query>(index=mouse type=LMouseDown) OR (index="keystrokes" type=KeyDown)  | timechart count by type | rename KeyDown AS "Key Strokes", LMouseDown AS "Clicks"</query>
+          <earliest>$time.tok.chart.earliest$</earliest>
+          <latest>$time.tok.chart.latest$</latest>
         </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.axisY2.enabled">false</option>
         <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
         <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
         <option name="charting.axisTitleX.visibility">visible</option>
@@ -25,9 +34,7 @@
         <option name="charting.axisTitleY2.visibility">visible</option>
         <option name="charting.axisX.scale">linear</option>
         <option name="charting.axisY.scale">linear</option>
-        <option name="charting.axisY2.enabled">false</option>
         <option name="charting.axisY2.scale">inherit</option>
-        <option name="charting.chart">line</option>
         <option name="charting.chart.bubbleMaximumSize">50</option>
         <option name="charting.chart.bubbleMinimumSize">10</option>
         <option name="charting.chart.bubbleSizeBy">area</option>
@@ -45,9 +52,9 @@
       <title>Counts by Application</title>
       <table>
         <search>
-          <query>index="keystrokes" OR index=mouse type=LMouseDown | bucket _time span=1s | stats count(pressure) as Clicks by app | join app [search index="keystrokes" type=KeyDown | bucket _time span=1s | stats count(type) as "Key Strokes" by app ] | sort + app</query>
-          <earliest>$time.tok.earliest$</earliest>
-          <latest>$time.tok.latest$</latest>
+          <query>(index=mouse type=LMouseDown) OR (index="keystrokes" type=KeyDown)  | chart count by app type | rename KeyDown AS "Key Strokes", LMouseDown AS "Clicks" | sort + app</query>
+          <earliest>$time.tok.table.earliest$</earliest>
+          <latest>$time.tok.table.latest$</latest>
         </search>
         <option name="wrap">true</option>
         <option name="rowNumbers">false</option>
@@ -59,11 +66,76 @@
   </row>
   <row>
     <panel>
+      <title>Key Strokes &gt; Clicks by Application</title>
       <chart>
         <search>
-          <query>index=mouse type=LMouseDown | bucket _time span=1s | timechart count(pressure) as Clicks | appendcols [search index="keystrokes" type=KeyDown | bucket _time span=1s | timechart count(type) as "Key Strokes"] | appendcols [search index="keystrokes" type=KeyDown | bucket _time span=1s | timechart count(type) as "Key Strokes"] | appendcols [search index="mouse" type=MouseMoved | bucket _time span=1s | timechart count(type) as "Mouse Movements"] | appendcols [search index="mouse" deltaY=* OR deltaX=* | bucket _time span=1s | timechart count(type) as "Mouse Scrolling"]</query>
-          <earliest>$time.tok.earliest$</earliest>
-          <latest>$time.tok.latest$</latest>
+          <query>(index=mouse type=LMouseDown) OR (index="keystrokes" type=KeyDown)  | chart count by app type | where KeyDown&gt;LMouseDown | rename KeyDown AS "Key Strokes", LMouseDown AS "Clicks", app AS App</query>
+          <earliest>$time.tok.chart.earliest$</earliest>
+          <latest>$time.tok.chart.latest$</latest>
+        </search>
+        <option name="charting.chart">column</option>
+        <option name="charting.axisY2.enabled">false</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
+        <option name="charting.axisTitleX.visibility">visible</option>
+        <option name="charting.axisTitleY.visibility">visible</option>
+        <option name="charting.axisTitleY2.visibility">visible</option>
+        <option name="charting.axisX.scale">linear</option>
+        <option name="charting.axisY.scale">linear</option>
+        <option name="charting.axisY2.scale">inherit</option>
+        <option name="charting.chart.bubbleMaximumSize">50</option>
+        <option name="charting.chart.bubbleMinimumSize">10</option>
+        <option name="charting.chart.bubbleSizeBy">area</option>
+        <option name="charting.chart.nullValueMode">gaps</option>
+        <option name="charting.chart.sliceCollapsingThreshold">0.01</option>
+        <option name="charting.chart.stackMode">default</option>
+        <option name="charting.chart.style">shiny</option>
+        <option name="charting.drilldown">all</option>
+        <option name="charting.layout.splitSeries">0</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
+        <option name="charting.legend.placement">right</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>Clicks &gt; Key Strokes by Application</title>
+      <chart>
+        <search>
+          <query>(index=mouse type=LMouseDown) OR (index="keystrokes" type=KeyDown)  | chart count by app type | where KeyDown&lt;LMouseDown | rename KeyDown AS "Key Strokes", LMouseDown AS "Clicks", app AS App</query>
+          <earliest>$time.tok.chart.earliest$</earliest>
+          <latest>$time.tok.chart.latest$</latest>
+        </search>
+        <option name="charting.chart">column</option>
+        <option name="charting.axisY2.enabled">false</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
+        <option name="charting.axisTitleX.visibility">visible</option>
+        <option name="charting.axisTitleY.visibility">visible</option>
+        <option name="charting.axisTitleY2.visibility">visible</option>
+        <option name="charting.axisX.scale">linear</option>
+        <option name="charting.axisY.scale">linear</option>
+        <option name="charting.axisY2.scale">inherit</option>
+        <option name="charting.chart.bubbleMaximumSize">50</option>
+        <option name="charting.chart.bubbleMinimumSize">10</option>
+        <option name="charting.chart.bubbleSizeBy">area</option>
+        <option name="charting.chart.nullValueMode">gaps</option>
+        <option name="charting.chart.sliceCollapsingThreshold">0.01</option>
+        <option name="charting.chart.stackMode">default</option>
+        <option name="charting.chart.style">shiny</option>
+        <option name="charting.drilldown">all</option>
+        <option name="charting.layout.splitSeries">0</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
+        <option name="charting.legend.placement">right</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Extremely Verbose Information!</title>
+      <chart>
+        <search>
+          <query>(index=mouse) OR (index="keystrokes") | timechart count by type | rename KeyDown AS "Key Strokes", LMouseDown AS "Left Mouse Down", RMouseDown AS "Right Mouse Down", LMouseUp AS "Left Mouse Up", RMouseUp AS "Right Mouse Up", MouseMoved AS "Mouse Moved" LMouseDragged AS "Left Click Drag", FlagsChanged AS "Control Key", ScrollWheel AS "Scroll Wheel"</query>
+          <earliest>$time.tok.chart.earliest$</earliest>
+          <latest>$time.tok.chart.latest$</latest>
         </search>
         <option name="charting.chart">line</option>
         <option name="charting.axisY2.enabled">undefined</option>
@@ -87,6 +159,21 @@
         <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
         <option name="charting.legend.placement">right</option>
       </chart>
+    </panel>
+    <panel>
+      <title>Detailed Counts by Application</title>
+      <table>
+        <search>
+          <query>(index=mouse) OR (index="keystrokes") | chart count by app type | rename KeyDown AS "Key Strokes", LMouseDown AS "Left Mouse Down", RMouseDown AS "Right Mouse Down", LMouseUp AS "Left Mouse Up", RMouseUp AS "Right Mouse Up", MouseMoved AS "Mouse Moved" LMouseDragged AS "Left Click Drag", FlagsChanged AS "Control Key", ScrollWheel AS "Scroll Wheel" | sort + app</query>
+          <earliest>$time.tok.table.earliest$</earliest>
+          <latest>$time.tok.table.latest$</latest>
+        </search>
+        <option name="wrap">true</option>
+        <option name="rowNumbers">false</option>
+        <option name="drilldown">cell</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="count">15</option>
+      </table>
     </panel>
   </row>
 </form>

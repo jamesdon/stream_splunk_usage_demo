@@ -4,7 +4,7 @@
  
 from AppKit import NSApplication, NSApp, NSWorkspace
 from Foundation import NSObject, NSLog
-from Cocoa import (NSEvent, NSKeyDownMask, NSCommandKeyMask, NSControlKeyMask, NSAlternateKeyMask, NSShiftKeyMask, NSLeftMouseDownMask, NSRightMouseDownMask, NSMouseMovedMask, NSScrollWheel, NSFlagsChangedMask)
+from Cocoa import (NSEvent, NSKeyDownMask, NSCommandKeyMask, NSControlKeyMask, NSAlternateKeyMask, NSShiftKeyMask, NSLeftMouseDownMask, NSRightMouseDownMask, NSMouseMovedMask, NSScrollWheel, NSFlagsChangedMask, NSRightMouseDraggedMask, NSLeftMouseDraggedMask, NSScrollWheelMask, NSEventMaskGesture, NSEventMaskMagnify, NSEventMaskSwipe, NSEventMaskRotate, NSEventMaskSmartMagnify)
 from PyObjCTools import AppHelper
 import logging
  
@@ -19,7 +19,15 @@ class AppDelegate(NSObject):
 		| NSRightMouseDownMask
 		| NSMouseMovedMask
 		| NSScrollWheel
-		| NSFlagsChangedMask)
+		| NSFlagsChangedMask
+		| NSRightMouseDraggedMask
+		| NSLeftMouseDraggedMask
+		| NSScrollWheelMask
+		| NSEventMaskGesture
+		| NSEventMaskMagnify
+		| NSEventMaskSwipe
+		| NSEventMaskRotate
+		| NSEventMaskSmartMagnify)
         NSEvent.addGlobalMonitorForEventsMatchingMask_handler_(mask, handler)
  
 def handler(event):

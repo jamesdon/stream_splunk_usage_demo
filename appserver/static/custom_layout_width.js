@@ -7,8 +7,8 @@ require(['jquery', 'splunkjs/mvc/simplexml/ready!'], function($) {
     var panelCells = $(firstRow).children('.dashboard-cell');
 
     // Adjust the cells' width
-    $(panelCells[0]).css('width', '35%');
-    $(panelCells[1]).css('width', '65%');
+    $(panelCells[0]).css('width', '30%');
+    $(panelCells[1]).css('width', '70%');
 
     // Force visualizations (esp. charts) to be redrawn with their new size
     $(window).trigger('resize');

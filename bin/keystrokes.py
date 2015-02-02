@@ -4,7 +4,7 @@
  
 from AppKit import NSApplication, NSApp, NSWorkspace
 from Foundation import NSObject, NSLog
-from Cocoa import (NSEvent, NSKeyDownMask, NSCommandKeyMask, NSControlKeyMask, NSAlternateKeyMask, NSShiftKeyMask, NSLeftMouseDownMask, NSRightMouseDownMask, NSMouseMovedMask, NSScrollWheel, NSFlagsChangedMask, NSRightMouseDraggedMask, NSLeftMouseDraggedMask, NSScrollWheelMask, NSEventMaskGesture, NSEventMaskMagnify, NSEventMaskSwipe, NSEventMaskRotate, NSEventMaskSmartMagnify)
+from Cocoa import (NSEvent, NSKeyDownMask, NSCommandKeyMask, NSControlKeyMask, NSAlternateKeyMask, NSShiftKeyMask, NSLeftMouseDownMask, NSRightMouseDownMask, NSScrollWheel, NSFlagsChangedMask, NSRightMouseDraggedMask, NSLeftMouseDraggedMask, NSScrollWheelMask, NSEventMaskGesture, NSEventMaskMagnify, NSEventMaskSwipe, NSEventMaskRotate, NSEventMaskSmartMagnify)
 from PyObjCTools import AppHelper
 import logging
  
@@ -17,7 +17,6 @@ class AppDelegate(NSObject):
 		| NSShiftKeyMask
 		| NSLeftMouseDownMask
 		| NSRightMouseDownMask
-		| NSMouseMovedMask
 		| NSScrollWheel
 		| NSFlagsChangedMask
 		| NSRightMouseDraggedMask
@@ -34,7 +33,7 @@ def handler(event):
     try:
 	activeAppName = NSWorkspace.sharedWorkspace().activeApplication()['NSApplicationName']
         ### The string replacement is necessary for characters that cause Splunk to end the line prematurely.
-        logging.info(' app="' + str(activeAppName) + '" ' + str(event).replace('\r', '<RETURN>').replace('\n', '<NEWLINE>').replace('\t', '<TAB>').replace('\" \"', '\"<SPACE>\"'))
+        logging.info(' app="' + str(activeAppName) + '" ' + str(event).replace('\r', '<\r>').replace('\n', '<\n>').replace('\t', '<\t>').replace('\" \"', '\"<\s>\"'))
     except UnicodeEncodeError as e:
 	# logging.info(event.encode('ascii', 'xmlcharrefreplace'))
         logging.info(event)

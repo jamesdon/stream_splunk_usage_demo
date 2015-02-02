@@ -1,6 +1,6 @@
 <nav search_view="search" color="#65A637">
-  <view name="homer_simpsons_web_page" default='true' />
-  <view name="system_performance" />
+  <view name="homer_simpsons_web_page" />
+  <view name="system_performance" default='true'/>
   <view name="stream_http_data" />
   <view name="stream_www_data" />
   <view name="clicks" />

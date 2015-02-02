@@ -108,7 +108,7 @@
     </panel>
     <panel>
       <table id="table1">
-        <title>Top Splunk Apps</title>
+        <title>Top WWW Sites</title>
         <search>
           <query>sourcetype="stream:http" site="www.*" | stats  sparkline count(response_time) avg(response_time) by site | rename avg(response_time) AS "Average Response Time in MS", count(response_time) AS "Page Hits", sparkline AS "Hits Over Time" | sort - "Page Hits"</query>
           <earliest>$time_tok.earliest$</earliest>

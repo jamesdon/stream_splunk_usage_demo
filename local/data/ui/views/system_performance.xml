@@ -14,7 +14,7 @@
       <chart>
         <title>Use Pan and Zoom to Select Time Ranges Used By Other Visualizations</title>
         <search>
-          <query>`os_index` `memory_sourcetype` host=* | timechart avg(loadAvg1mi) AS LOAD | appendcols [search `os_index` `memory_sourcetype` host=* | timechart median(memUsedPct) AS MEMORY] | appendcols [search `os_index` `cpu_sourcetype` host=* | eval Percent_CPU_Load = 100 - pctIdle | timechart avg(Percent_CPU_Load) AS CPU]</query>
+          <query>`os_index` `memory_sourcetype` host=* | timechart avg(loadAvg1mi) AS "LOAD - 1 Min Ave" | appendcols [search index=os sourcetype=top host=* | timechart max(pctCPU) AS "CPU - Max%", max(memUsedPct)] | appendcols [search index=os sourcetype=vmstat host=* | timechart max(memUsedPct) AS "MEM - Max%"]</query>
           <earliest>$field1.earliest$</earliest>
           <latest>$field1.latest$</latest>
         </search>
@@ -51,7 +51,7 @@
       </html>
       <table>
         <search>
-          <query>index=os sourcetype=top host=* | stats max(pctCPU) as pctCPU last(RES) as MEM last(cpuTIME) as cpuTIME by COMMAND, USER | fields COMMAND, USER, pctCPU, MEM, cpuTIME | sort - pctCPU MEM</query>
+          <query>index=os sourcetype=top host=* | stats max(pctCPU) as pctCPU last(RES) as MEM last(cpuTIME) as cpuTIME by COMMAND, USER | fields COMMAND, USER, pctCPU, MEM, cpuTIME | sort - pctCPU MEM | rename pctCPU AS "% CPU", cpuTIME as "% CPU Time"</query>
           <earliest>$selection.earliest$</earliest>
           <latest>$selection.latest$</latest>
         </search>

@@ -1,5 +1,5 @@
 <form stylesheet="custom_layout_overlay_single.css">
-  <label>"Here it is everybody, the World's Greatest Website!"</label>
+  <label>"Here it is everybody, The World's Greatest Website!"</label>
     <description/>
   <fieldset autoRun="true" submitButton="false">
     <input type="time" searchWhenChanged="true">

@@ -44,6 +44,8 @@ def handler(event):
  
 def main():
     app = NSApplication.sharedApplication()
+    ### Zero out the log file when you start up to prevent wild disk utilization
+    open('../data/keys.log', 'w').close()
     logging.basicConfig(filename='../data/keys.log', format='%(asctime)s %(message)s', level=logging.INFO)
     delegate = AppDelegate.alloc().init()
     NSApp().setDelegate_(delegate)

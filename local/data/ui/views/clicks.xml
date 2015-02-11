@@ -60,7 +60,7 @@
         <option name="rowNumbers">false</option>
         <option name="dataOverlayMode">none</option>
         <option name="drilldown">cell</option>
-        <option name="count">25</option>
+        <option name="count">30</option>
       </table>
     </panel>
   </row>

@@ -70,8 +70,8 @@
       <chart>
         <search>
           <query>(index=mouse type=LMouseDown) OR (index="keystrokes" type=KeyDown)  | chart count by app type | where KeyDown&gt;LMouseDown | rename KeyDown AS "Key Strokes", LMouseDown AS "Clicks", app AS App</query>
-          <earliest>$time.tok.chart.earliest$</earliest>
-          <latest>$time.tok.chart.latest$</latest>
+          <earliest>$time.tok.table.earliest$</earliest>
+          <latest>$time.tok.table.latest$</latest>
         </search>
         <option name="charting.chart">column</option>
         <option name="charting.axisY2.enabled">false</option>
@@ -101,8 +101,8 @@
       <chart>
         <search>
           <query>(index=mouse type=LMouseDown) OR (index="keystrokes" type=KeyDown)  | chart count by app type | where KeyDown&lt;LMouseDown | rename KeyDown AS "Key Strokes", LMouseDown AS "Clicks", app AS App</query>
-          <earliest>$time.tok.chart.earliest$</earliest>
-          <latest>$time.tok.chart.latest$</latest>
+          <earliest>$time.tok.table.earliest$</earliest>
+          <latest>$time.tok.table.latest$</latest>
         </search>
         <option name="charting.chart">column</option>
         <option name="charting.axisY2.enabled">false</option>
@@ -133,7 +133,7 @@
       <title>Extremely Verbose Information!</title>
       <chart>
         <search>
-          <query>(index=mouse) OR (index="keystrokes") | timechart count by type | rename KeyDown AS "Key Strokes", LMouseDown AS "Left Mouse Down", RMouseDown AS "Right Mouse Down", LMouseUp AS "Left Mouse Up", RMouseUp AS "Right Mouse Up", MouseMoved AS "Mouse Moved" LMouseDragged AS "Left Click Drag", FlagsChanged AS "Control Key", ScrollWheel AS "Scroll Wheel"</query>
+          <query>(index=mouse) OR (index="keystrokes") | timechart count by type | rename KeyDown AS "Key Strokes", LMouseDown AS "Left Mouse Down", RMouseDown AS "Right Mouse Down", LMouseUp AS "Left Mouse Up", RMouseUp AS "Right Mouse Up", MouseMoved AS "Mouse Moved" LMouseDragged AS "Left Click Drag", FlagsChanged AS "Control Key", ScrollWheel AS "Scroll Wheel" | fields - NULL</query>
           <earliest>$time.tok.chart.earliest$</earliest>
           <latest>$time.tok.chart.latest$</latest>
         </search>

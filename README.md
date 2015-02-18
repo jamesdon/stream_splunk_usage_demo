@@ -35,7 +35,9 @@ Now, all of the dashboards should have data after you log into your Splunk insta
 
 ### System Performance 
 
-This requires updates to the Splunk_TA_nix:
+This requires the Splunk App for Unix and Linux - https://apps.splunk.com/app/273/.  After installing the App, enable all of the data inputs.  
+
+Additional steps beyond that:
 
 1) For Yosemite users, update line 45 in top.sh:
 vi +45 /opt/splunk/etc/apps/Splunk_TA_nix/bin/top.sh

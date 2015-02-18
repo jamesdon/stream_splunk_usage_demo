@@ -94,5 +94,18 @@
         <option name="count">10</option>
       </table>
     </panel>
+    <panel>
+      <table>
+        <title>Disk Alerts</title>
+        <search>
+          <query>index=* sourcetype=df  | fillnull value=11 MinPercentFreeSpace | table host, mount, MinPercentFreeSpace, PercentFreeSpace | where MinPercentFreeSpace &gt; PercentFreeSpace</query>
+          <earliest>$field1.earliest$</earliest>
+          <latest>$field1.latest$</latest>
+        </search>
+        <option name="wrap">undefined</option>
+        <option name="rowNumbers">undefined</option>
+        <option name="drilldown">row</option>
+      </table>
+    </panel>
   </row>
 </form>

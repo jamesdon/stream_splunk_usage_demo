@@ -42,7 +42,8 @@ Additional steps beyond that:
 1) For Yosemite users, update line 45 in top.sh:
 vi +45 /opt/splunk/etc/apps/Splunk_TA_nix/bin/top.sh
 Replace rshrd with vprvt
-This may not be a proper replacement, but it fixes it enough to get data in this dashboard.
+
+This will have to be done everytime that the TA gets updated until the issue is resolved.  We are working around a bug.  This may not be a proper replacement, but it fixes it enough to get data in this dashboard.
 
 
 ### Clicks! and Keys!:
@@ -63,7 +64,7 @@ Due to its evil nature, I will not start this automatically.  This is also why t
 
 ### Wish list:
 Tag Cloud dash for most popular words
+Plot dash based on mouse movement - we need a new charting type for this.
 Add trackpad distance traveled
 Add window resizing
-Force Directed dash  based on mouse movement
 Add simple / verbose check box for RT keystrokes
